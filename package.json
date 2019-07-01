@@ -1,7 +1,9 @@
 {
   "name": "jitsi-meet",
   "version": "0.0.0",
-  "scripts":{"start": "index.html"},
+  "scripts": {
+  "start": "node app.js"
+            },
   "description": "A sample app for the Jitsi Videobridge",
   "repository": {
     "type": "git",
