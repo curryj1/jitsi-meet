@@ -1,11 +1,12 @@
 {
   "name": "jitsi-meet",
   "version": "0.0.0",
-  "scripts": {
-    "start": "node app.js"
-            },
   "description": "A sample app for the Jitsi Videobridge",
-  "main": "app.js",
+  "scripts": {
+    "lint": "eslint . && flow",
+    "validate": "npm ls",
+    "start": "node app.js"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/jitsi/jitsi-meet"
@@ -129,10 +130,7 @@
     "npm": "6.9.0"
   },
   "license": "Apache-2.0",
-  "scripts": {
-    "lint": "eslint . && flow",
-    "validate": "npm ls"
-  },
+  
   "pre-commit": [
     "lint"
   ],
