@@ -10,6 +10,4 @@ app.use(express.static(__dirname));
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'index.html'));
 });
-console.log(__dirname);
-console.log("go to https:localhost:8080");
 app.listen(port);

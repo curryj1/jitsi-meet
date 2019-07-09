@@ -132,7 +132,7 @@
     "validate": "npm ls"
   },
   "pre-commit": [
-    "eslint"
+    "lint"
   ],
   "browser": {
     "jQuery-Impromptu": "jQuery-Impromptu/src/jquery-impromptu.js"
