@@ -7,7 +7,18 @@ const app = express();
 app.use(express.static(__dirname));
 
 // send the user to index html page inspite of the url
-app.get('*', (req, res) => {
+app.get('', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'index.html'));
 });
+app.get('/libs/app.bundle.min.js', (req, res) => {
+  res.sendFile(path.resolve(__dirname +'/build/app.bundle.min.js'));
+});
+app.get('/libs/external_connect.min.js', (req, res) => {
+  res.sendFile(path.resolve(__dirname +'/build/external_connect.js'));
+});
+app.get('/libs/do_external_connect.min.js', (req, res) => {
+  res.sendFile(path.resolve(__dirname +'/build/do_external_connect.min.js'));
+});
 app.listen(port);
+
+//
