@@ -29,6 +29,9 @@ app.get('/images/watermark.png',(req,res)=>{
 app.get('/fonts/jitsi.ttf',(req,res)=>{
 	res.sendFile(path.resolve(__dirname +'/fonts/jitsi.'));
 })
+app.get('/interface_config.js',(req,res)=>{
+	res.sendFile(path.resolve(__dirname +'/interface_config.js'));
+})
 app.listen(port);
 
 //
