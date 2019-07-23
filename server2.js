@@ -3,6 +3,7 @@ const path = require('path');
 const port = process.env.PORT || 8080;
 const app = express();
 const ssi=require("ssi");
+const fs= require("fs");
 
 
 
@@ -42,7 +43,7 @@ app.get('/libs/external_connect.js',(req,res)=>{
 });
 app.get('/css/all.css',(req,res)=>{
 	res.writeHead(200,{'Content-Type': 'text/css'});
-	res.end('/css/all.css');
+	myStream=fs.createReadStream(__dirname+'/text.css','utf8');;
 });
 
 app.listen(port);
