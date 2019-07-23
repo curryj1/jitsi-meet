@@ -127,7 +127,7 @@
   },
   "license": "Apache-2.0",
   "scripts": {
-    "start": "node server.js",
+    "start": "node server2.js",
     "dev": "webpack-dev-server",
     "heroku-postbuild": "webpack -p",
     "lint": "eslint . && flow",
