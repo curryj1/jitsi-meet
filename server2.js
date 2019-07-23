@@ -11,17 +11,6 @@ const fs= require("fs");
 // the __dirname is the current directory from where the script is running
 app.use(express.static(__dirname));
 
-var inputDirectory = __dirname;
-var outputDirectory = __dirname;
-var matcher = "/index.shtml";
-
-var includes = new ssi(inputDirectory, outputDirectory, matcher);
-var includes2= new ssi(__dirname+"static", __dirname, __dirname+'index.shtml');
-includes2.compile();
-includes.compile();
-var includes3= new ssi(__dirname+"connect_optimization",__dirname,__dirname+"index.shtml");
-includes3.compile();
-
 app.get('', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'index.shtml'));
 });
