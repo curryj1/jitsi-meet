@@ -32,7 +32,7 @@ app.get('/libs/external_connect.js',(req,res)=>{
 });
 app.get('/css/all.css',(req,res)=>{
 	res.writeHead(200,{'Content-Type': 'text/css'});
-	myStream=fs.createReadStream(__dirname+'/text.css','utf8');;
+	myStream=fs.createReadStream(__dirname+'/css/all.css','utf8');
 });
 
 app.listen(port);
