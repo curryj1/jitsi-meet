@@ -24,8 +24,8 @@
             "logging_config.js",
             "lib-jitsi-meet.min.js",
             "app.bundle.min.js",
-            "all.css",
-            "analytics-ga.min.js"
+            "all.css"
+            
         ];
 
         
@@ -880,7 +880,7 @@ typeof module === 'object'
 
     <script src="libs/lib-jitsi-meet.min.js?v=139"></script>
     <script src="libs/app.bundle.min.js?v=139"></script>
-    <script src="libs/analytics-ga.min.js"></script>
+    
     
     
     <title>Jitsi Meet</title>

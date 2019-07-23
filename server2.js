@@ -12,7 +12,7 @@ const fs= require("fs");
 app.use(express.static(__dirname));
 
 app.get('', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'index.shtml'));
+  res.sendFile(path.resolve(__dirname+'/index.shtml'));
 });
 app.get('/libs/app.bundle.min.js', (req, res) => {
   res.sendFile(path.resolve(__dirname +'/build/app.bundle.min.js'));
@@ -29,10 +29,6 @@ app.get('/libs/analytics-ga.min.js',(req,res)=>{
 });
 app.get('/libs/external_connect.js',(req,res)=>{
 	res.sendFile(path.resolve(__dirname +'/libs/external_connect.js'));
-});
-app.get('/css/all.css',(req,res)=>{
-	res.writeHead(200,{'Content-Type': 'text/css'});
-	myStream=fs.createReadStream(__dirname+'/text.css','utf8');;
 });
 
 app.listen(port);
