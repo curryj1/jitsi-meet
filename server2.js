@@ -38,10 +38,11 @@ app.get('/libs/analytics-ga.min.js',(req,res)=>{
 	res.sendFile(path.resolve(__dirname +'/build/analytics-ga.min.js'));
 });
 app.get('/libs/external_connect.js',(req,res)=>{
-	res.sendFile(path.resolve(__dirname +'/build/external_connect.js'));
+	res.sendFile(path.resolve(__dirname +'/libs/external_connect.js'));
 });
 app.get('/css/all.css',(req,res)=>{
-	res.sendFile(__dirname +'/css/all.css')
+	res.writeHead(200,{'Content-Type: "text/css'});
+	res.end('/css/all.css');
 });
 
 app.listen(port);
