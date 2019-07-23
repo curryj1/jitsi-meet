@@ -37,7 +37,7 @@ app.get('/libs/lib-jitsi-meet.min.js',(req,res)=>{
 app.get('/libs/analytics-ga.min.js',(req,res)=>{
 	res.sendFile(path.resolve(__dirname +'/build/analytics-ga.min.js'));
 });
-app.get('/libs/do_external_connect.min.js',(req,res)=>{
+app.get('/libs/external_connect.js',(req,res)=>{
 	res.sendFile(path.resolve(__dirname +'/build/external_connect.js'));
 });
 app.get('/css/all.css',(req,res)=>{
