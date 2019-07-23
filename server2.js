@@ -41,7 +41,7 @@ app.get('/libs/external_connect.js',(req,res)=>{
 	res.sendFile(path.resolve(__dirname +'/libs/external_connect.js'));
 });
 app.get('/css/all.css',(req,res)=>{
-	res.writeHead(200,{'Content-Type: "text/css'});
+	res.writeHead(200,{'Content-Type': 'text/css'});
 	res.end('/css/all.css');
 });
 
