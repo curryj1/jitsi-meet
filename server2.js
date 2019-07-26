@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 9020;
 const app = express();
 const ssi=require("ssi");
 const fs= require("fs");
@@ -12,7 +12,7 @@ const fs= require("fs");
 app.use(express.static(__dirname));
 
 app.get('', (req, res) => {
-  res.sendFile(path.resolve(__dirname+'/index.shtml'));
+  res.sendFile(path.resolve(__dirname+'/index.html'));
 });
 app.get('/libs/app.bundle.min.js', (req, res) => {
   res.sendFile(path.resolve(__dirname +'/build/app.bundle.min.js'));
@@ -33,6 +33,9 @@ app.get('/libs/external_connect.js',(req,res)=>{
 app.get('/css/all.css',(req,res)=>{
 	res.set('Content-Type', 'text/css');
 	res.sendFile(path.resolve(__dirname+'/css/all.css'));
+});
+app.get('/external_api.js',(req,res)=>{
+	res.sendFile(path.resolve(__dirname+'/modules/API/external/external_api.js'));
 });
 
 app.listen(port);
