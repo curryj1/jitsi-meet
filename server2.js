@@ -35,7 +35,7 @@ app.get('/css/all.css',(req,res)=>{
 	res.sendFile(path.resolve(__dirname+'/css/all.css'));
 });
 app.get('/external_api.js',(req,res)=>{
-	res.sendFile(path.resolve(__dirname+'/modules/API/external/external_api.js'));
+	res.sendFile(path.resolve(__dirname+'/build/external_api.min.js'));
 });
 
 app.listen(port);
