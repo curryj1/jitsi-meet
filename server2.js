@@ -36,7 +36,7 @@ app.get('/intern',(req,res)=>{
 });
 app.get('/css/all.css',(req,res)=>{
 	res.writeHead(200, {'Content-type' : 'text/css'});
-	var fileContents = fs.readFileSync('./css/all.css', {encoding: 'utf8'});
+	var fileContents = fs.readFileSync('/css/all.css', {encoding: 'utf8'});
 	res.write(fileContents);
 	res.end();
 
