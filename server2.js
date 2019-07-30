@@ -11,7 +11,7 @@ const fs= require("fs");
  
 // the __dirname is the current directory from where the script is running
 app.use(express.static(__dirname));
-app.use(express.static(__dirname+'/css/all.css'));
+
 
 app.get('', (req, res) => {
   res.sendFile(path.resolve(__dirname+'/index.html'));
