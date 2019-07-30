@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const port = process.env.PORT || 9020;
 const app = express();
-const ssi=require("ssi");
 const fs= require("fs");
 
 
@@ -34,13 +33,7 @@ app.get('/external_api.js',(req,res)=>{
 app.get('/intern',(req,res)=>{
 	res.sendFile(path.resolve(__dirname+'/index.html'));
 });
-app.get('/css/all.css',(req,res)=>{
-	res.writeHead(200, {'Content-type' : 'text/css'});
-	var fileContents = fs.readFileSync('/css/all.css', {encoding: 'utf8'});
-	res.write(fileContents);
-	res.end();
 
-});
 
 //in conference.js there is a function called connect which needs roomname as an atribute.
 // try to require the conference.js and use the connect function to get the roomname for the url.
