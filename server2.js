@@ -13,9 +13,7 @@ const fs= require("fs");
 app.use(express.static(__dirname));
 
 
-app.get('', (req, res) => {
-  res.sendFile(path.resolve(__dirname+'/index.html'));
-});
+
 app.get('/libs/app.bundle.min.js', (req, res) => {
   res.sendFile(path.resolve(__dirname +'/build/app.bundle.min.js'));
 });
@@ -29,15 +27,19 @@ app.get('/libs/lib-jitsi-meet.min.js',(req,res)=>{
 app.get('/libs/analytics-ga.min.js',(req,res)=>{
 	res.sendFile(path.resolve(__dirname +'/build/analytics-ga.min.js'));
 });
-app.get('/libs/external_connect.js',(req,res)=>{
-	res.sendFile(path.resolve(__dirname +'/libs/external_connect.js'));
-});
 
 app.get('/external_api.js',(req,res)=>{
 	res.sendFile(path.resolve(__dirname+'/build/external_api.min.js'));
 });
 app.get('/intern',(req,res)=>{
 	res.sendFile(path.resolve(__dirname+'/index.html'));
+});
+app.get('/css/all.css',(req,res)=>{
+	res.writeHead(200, {'Content-type' : 'text/css'});
+	var fileContents = fs.readFileSync('./css/all.css', {encoding: 'utf8'});
+	res.write(fileContents);
+	res.end();
+
 });
 
 //in conference.js there is a function called connect which needs roomname as an atribute.
