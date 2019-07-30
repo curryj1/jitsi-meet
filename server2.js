@@ -34,11 +34,7 @@ app.get('/intern',(req,res)=>{
 	res.sendFile(path.resolve(__dirname+'/index.html'));
 });
 app.get('/css/all.css',(req,res)=>{
-	res.writeHead(200, {'Content-type' : 'text/css'});
-	var fileContents = fs.readFileSync('/css/all.css', {encoding: 'utf8'});
-	res.write(fileContents);
-	res.end();
-
+	sendFile(path.resolve(__dirname+'/css/all.css'));
 });
 
 //in conference.js there is a function called connect which needs roomname as an atribute.
