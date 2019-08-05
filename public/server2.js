@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const port = process.env.PORT || 9020;
 const app = express();
+const ssi=require("ssi");
 const fs= require("fs");
 
 
@@ -10,32 +11,17 @@ const fs= require("fs");
  
 // the __dirname is the current directory from where the script is running
 app.use(express.static(__dirname));
+app.use(express.static(__dirname+'/build'));
+app.use(express.static(__dirname+'/libs'));
 
 
-
-
-app.get('/libs/app.bundle.min.js', (req, res) => {
-  res.sendFile(path.resolve(__dirname +'/build/app.bundle.min.js'));
-});
-
-app.get('/libs/do_external_connect.min.js', (req, res) => {
-  res.sendFile(path.resolve(__dirname +'/build/do_external_connect.min.js'));
-});
 app.get('/libs/lib-jitsi-meet.min.js',(req,res)=>{
 	res.sendFile(path.resolve(__dirname +'/node_modules/lib-jitsi-meet/lib-jitsi-meet.min.js'));
 });
-app.get('/libs/analytics-ga.min.js',(req,res)=>{
-	res.sendFile(path.resolve(__dirname +'/build/analytics-ga.min.js'));
-});
 
-app.get('/external_api.js',(req,res)=>{
-	res.sendFile(path.resolve(__dirname+'/build/external_api.min.js'));
-});
+
 app.get('/intern',(req,res)=>{
 	res.sendFile(path.resolve(__dirname+'/index.html'));
-});
-app.get('all.css',(req,res)=>{
-	res.sendFile(path.resolve(__dirname+'all.css'));
 });
 
 //in conference.js there is a function called connect which needs roomname as an atribute.
