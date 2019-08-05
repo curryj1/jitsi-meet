@@ -20,17 +20,11 @@ app.get('/libs/do_external_connect.min.js', (req, res) => {
 app.get('/libs/lib-jitsi-meet.min.js',(req,res)=>{
 	res.sendFile(path.resolve(__dirname +'/node_modules/lib-jitsi-meet/lib-jitsi-meet.min.js'));
 })
-app.get('/css/all.css',(req,res)=>{
-	res.sendFile(path.resolve(__dirname +'/css/all.css'));
+app.get('/libs/analytics-ga.min.js',(req,res)=>{
+	res.sendFile(path.resolve(__dirname +'/build/analytics-ga.min.js'));
 })
-app.get('/images/watermark.png',(req,res)=>{
-	res.sendFile(path.resolve(__dirname +'/images/watermark.png'));
-})
-app.get('/fonts/jitsi.ttf',(req,res)=>{
-	res.sendFile(path.resolve(__dirname +'/fonts/jitsi.'));
-})
-app.get('/interface_config.js',(req,res)=>{
-	res.sendFile(path.resolve(__dirname +'/interface_config.js'));
+app.get('/libs/do_external_connect.min.js',(req,res)=>{
+	res.sendFile(path.resolve(__dirname +'/build/external_connect.js'));
 })
 app.listen(port);
 
