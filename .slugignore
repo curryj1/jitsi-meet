@@ -6,7 +6,7 @@ server.js
 build/
 *min.map
 
-*
+#
 css/
 *css
 
