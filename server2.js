@@ -9,8 +9,11 @@ const fs= require("fs");
 
  
 // the __dirname is the current directory from where the script is running
-app.use(express.static(__dirname));
+app.use(express.static(__dirname+'/css'));
 
+app.get('', (req,res) => {
+	res.sendFile(path.resolve(__dirname+'/index.html'));
+});
 
 
 app.get('/libs/app.bundle.min.js', (req, res) => {
@@ -34,7 +37,6 @@ app.get('/intern',(req,res)=>{
 	res.sendFile(path.resolve(__dirname+'/index.html'));
 });
 app.get('/css/all.css',(req,res)=>{
-	res.set('Content-Type','text/css');
 	res.sendFile(path.resolve(__dirname+'/css/all.css'));
 });
 
