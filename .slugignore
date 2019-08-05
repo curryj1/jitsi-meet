@@ -1,5 +1,4 @@
 #Ignore these for slug size
-webpack.config.js
 server.js
 build/*min.map
 
