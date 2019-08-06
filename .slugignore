@@ -8,8 +8,12 @@ build/
 
 #
 css/
-*css
 
 #
 libs/
+
+#
+connection_optimization/
+
+
 
