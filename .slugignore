@@ -10,6 +10,4 @@ build/
 css/
 *css
 
-#
-connection_optimization/*
 
