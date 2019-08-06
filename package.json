@@ -129,7 +129,7 @@
   "scripts": {
     "start": "node server2.js",
     "dev": "webpack-dev-server",
-    "heroku-postbuild": "webpack && make",
+    "heroku-postbuild": "webpack -p",
     "lint": "eslint . && flow",
     "validate": "npm ls"
   },

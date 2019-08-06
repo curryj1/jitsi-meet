@@ -34,8 +34,8 @@ app.get('/external_api.js',(req,res)=>{
 app.get('/intern',(req,res)=>{
 	res.sendFile(path.resolve(__dirname+'/index.html'));
 });
-app.get('/css/all.css',(req,res)=>{
-	res.sendFile(path.resolve(__dirname+'/css/all.css'));
+app.get('/style.css',(req,res)=>{
+	res.sendFile(path.resolve(__dirname+'/style.css'));
 });
 
 //in conference.js there is a function called connect which needs roomname as an atribute.
