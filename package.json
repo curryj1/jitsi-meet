@@ -2,11 +2,6 @@
   "name": "jitsi-meet",
   "version": "0.0.0",
   "description": "A sample app for the Jitsi Videobridge",
-  "scripts": {
-    "lint": "eslint . && flow",
-    "validate": "npm ls",
-    "start": "node app.js"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/jitsi/jitsi-meet"
@@ -50,14 +45,14 @@
     "i18next-xhr-backend": "1.4.2",
     "jQuery-Impromptu": "github:trentrichardson/jQuery-Impromptu#v6.0.0",
     "jitsi-meet-logger": "github:jitsi/jitsi-meet-logger#6fff754a77a56ab52499f3559105a15886942a1e",
-    "jquery": "3.3.1",
+    "jquery": "^3.3.1",
     "jquery-contextmenu": "2.4.5",
     "jquery-i18next": "1.2.0",
     "js-md5": "0.6.1",
     "js-utils": "github:jitsi/js-utils#73a67a7a60d52f8e895f50939c8fcbd1f20fe7b5",
     "jsrsasign": "8.0.12",
     "jwt-decode": "2.2.0",
-    "lib-jitsi-meet": "github:jitsi/lib-jitsi-meet#c0af82a215d0893f1999df299cfdfcbc9ce9e72a",
+    "lib-jitsi-meet": "file///Users/justin/jitsi-meet/node_modules/lib-jitsi-meet",
     "libflacjs": "github:mmig/libflac.js#93d37e7f811f01cf7d8b6a603e38bd3c3810907d",
     "lodash": "4.17.11",
     "moment": "2.19.4",
@@ -117,20 +112,25 @@
     "flow-bin": "0.92.0",
     "imports-loader": "0.7.1",
     "metro-react-native-babel-preset": "0.49.2",
-    "node-sass": "4.10.0",
+    "node-sass": "^4.12.0",
     "precommit-hook": "3.0.0",
     "string-replace-loader": "2.1.1",
     "style-loader": "0.19.0",
-    "webpack": "4.26.1",
-    "webpack-cli": "3.1.2",
-    "webpack-dev-server": "3.1.14"
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.1.14"
   },
   "engines": {
     "node": "10.16.0",
     "npm": "6.9.0"
   },
   "license": "Apache-2.0",
-  
+  "scripts": {
+  	"start": "node server.js",
+  	"heroku-postbuild":"webpack -p",
+    "lint": "eslint . && flow",
+    "validate": "npm ls"
+  },
   "pre-commit": [
     "lint"
   ],
