@@ -128,7 +128,7 @@
   "scripts": {
     "lint": "eslint . && flow",
     "start": "webpack-dev-server --open",
-    "heroku-postbuild":"make && webpack -p",
+    "heroku-postbuild":"webpack -p",
     "validate": "npm ls"
   },
   "pre-commit": [
