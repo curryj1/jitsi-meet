@@ -39,6 +39,7 @@
     "amplitude-js": "4.5.2",
     "bc-css-flags": "3.0.0",
     "dropbox": "4.0.9",
+    "express": "^4.17.1",
     "i18n-iso-countries": "3.7.8",
     "i18next": "8.4.3",
     "i18next-browser-languagedetector": "2.0.0",
@@ -83,8 +84,10 @@
     "react-transition-group": "2.4.0",
     "redux": "4.0.0",
     "redux-thunk": "2.2.0",
+    "ssi": "^0.3.0",
     "styled-components": "3.4.9",
     "uuid": "3.1.0",
+    "webpack-prod-server": "^1.1.1",
     "xmldom": "0.1.27"
   },
   "devDependencies": {
@@ -118,7 +121,7 @@
     "style-loader": "0.19.0",
     "webpack": "4.26.1",
     "webpack-cli": "3.1.2",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.8.0"
   },
   "engines": {
     "node": "12.7.0",
@@ -127,7 +130,9 @@
   "license": "Apache-2.0",
   "scripts": {
     "lint": "eslint . && flow",
+    "dev": "webpack-dev-server",
     "start": "node server.js",
+    "prod": "webpack-prod-server",
     "heroku-postbuild": "webpack -p",
     "validate": "npm ls"
   },

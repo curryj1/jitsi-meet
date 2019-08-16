@@ -125,7 +125,7 @@ const config = {
         ]
     }
 };
-
+//maybe console.log(config). Try and figure out whwat module.exports looks like
 module.exports = [
     Object.assign({}, config, {
         entry: {
@@ -152,6 +152,7 @@ module.exports = [
         }
     }),
 
+
     // The Webpack configuration to bundle external_api.js (aka
     // JitsiMeetExternalAPI).
     Object.assign({}, config, {
@@ -163,6 +164,7 @@ module.exports = [
             libraryTarget: 'umd'
         })
     })
+
 ];
 
 /**
