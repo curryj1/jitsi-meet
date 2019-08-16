@@ -1,0 +1,15 @@
+<html>
+    <!--#include virtual="base.html" -->
+
+    
+   <!--#include virtual="/config.js" --><!-- adapt to your needs, i.e. set hosts and bosh path -->
+    <!--#include virtual="connection_optimization/connection_optimization.html" -->
+    
+    <!--#include virtual="/interface_config.js" -->
+    <!--#include virtual="/logging_config.js" -->
+ 
+    <!--#include virtual="title.html" -->
+    <!--#include virtual="plugin.head.html" -->
+    <!--#include virtual="static/welcomePageAdditionalContent.html" -->
+
+</html>
