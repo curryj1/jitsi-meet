@@ -5,6 +5,14 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 
 const app = express();
 
+var ssi = require("ssi");
+ 
+var inputDirectory = __dirname;
+var outputDirectory = "index.shtml";
+var matcher = "index.shtml";
+ 
+var includes = new ssi(inputDirectory, outputDirectory, matcher);
+includes.compile();
 
 //require webpack-dev-server.js?
 // Tell express to use the webpack-dev-middleware and use the webpack.config.js
