@@ -16,6 +16,7 @@ const minimize
 // The base Webpack configuration to bundle the JavaScript artifacts of
 // jitsi-meet such as app.bundle.js and external_api.js.
 const config = {
+
     devServer: {
         https: true,
         inline: true,
@@ -125,7 +126,8 @@ const config = {
         ]
     }
 };
-//maybe console.log(config). Try and figure out whwat module.exports looks like
+
+// maybe console.log(config). Try and figure out whwat module.exports looks like
 module.exports = [
     Object.assign({}, config, {
         entry: {

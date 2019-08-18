@@ -1,17 +1,11 @@
 const path = require('path');
 const express = require('express');
 const port = process.env.PORT || 3000;
-
 const app = express();
 
-var ssi = require("ssi");
  
-var inputDirectory = __dirname;
-var outputDirectory = "index.shtml";
-var matcher = "index.shtml";
- 
-var includes = new ssi(inputDirectory, outputDirectory, matcher);
-includes.compile();
+
+
 
 //require webpack-dev-server.js?
 // Tell express to use the webpack-dev-middleware and use the webpack.config.js
@@ -37,7 +31,7 @@ app.get('/external_api.js',(req,res)=>{
 	res.sendFile(path.resolve(__dirname+'/build/external_api.min.js'));
 });
 app.get('/intern',(req,res)=>{
-	res.sendFile(path.resolve(__dirname+'/index.html'));
+	res.sendFile(path.resolve(__dirname+'/index.shtml'));
 });
 app.get('/css/all.css',(req,res)=>{
 	res.sendFile(path.resolve(__dirname +"/css/all.css"));
