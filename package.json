@@ -131,7 +131,7 @@
   "scripts": {
     "lint": "eslint . && flow",
     "dev": "webpack-dev-server",
-    "start": "node server.js",
+    "start": "web: bin/start-nginx-solo",
     "prod": "webpack-prod-server",
     "heroku-postbuild": "webpack -p",
     "validate": "npm ls"
